@@ -1,9 +1,7 @@
 import axios from "axios";
 
-// Tu API Key (la que proporcionaste)
-const APIKEY = "984a878"; // Asegúrate de que esta clave sea válida
+const APIKEY = "984a878"; 
 
-// Función para buscar películas por página
 const OMDBSearchByPage = async (searchText, page = 1) => {
   let returnObject = {
     respuesta: false,
@@ -27,7 +25,6 @@ const OMDBSearchByPage = async (searchText, page = 1) => {
   return returnObject;
 };
 
-// Función para búsqueda completa de películas (sin paginación)
 const OMDBSearchComplete = async (searchText) => {
   let returnObject = {
     respuesta: false,
@@ -51,7 +48,6 @@ const OMDBSearchComplete = async (searchText) => {
   return returnObject;
 };
 
-// Función para obtener detalles de una película por IMDB ID
 const OMDBGetByImdbID = async (imdbID) => {
   let returnObject = {
     respuesta: false,
@@ -73,5 +69,4 @@ const OMDBGetByImdbID = async (imdbID) => {
   return returnObject;
 };
 
-// Exportar las funciones para que puedan ser utilizadas en otros módulos
 export { OMDBSearchByPage, OMDBSearchComplete, OMDBGetByImdbID };
